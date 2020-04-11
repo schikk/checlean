@@ -1,0 +1,12 @@
+.main-nav {
+  margin-bottom: 30px;
+
+  &__link {
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+  }
+
+}

@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "id": "1",
+      "title": "Сміття вздовж узбіччя",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "location": "вул. Кобзарська, 1",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
+      "status": null
+    },
+    {
+      "id": "2",
+      "title": "Сміття вздовж узбіччя",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "location": "вул. Кобзарська, 2",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
+      "status": null
+    },
+    {
+      "id": "3",
+      "title": "Сміття вздовж узбіччя",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "location": "вул. Кобзарська, 3",
+      "photo": "https://www.ekathimerini.com/resources/2019-08/trash-thumb-large.jpg",
+      "status": null
+    },
+    {
+      "id": "4",
+      "title": "Сміття вздовж узбіччя",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "location": "вул. Кобзарська, 4",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
+      "status": null
+    },
+    {
+      "id": "5",
+      "title": "Сміття вздовж узбіччя",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "location": "вул. Кобзарська, 5",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
+      "status": null
+    }
+  ]
+}

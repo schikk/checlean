@@ -1,0 +1,15 @@
+.main-header {
+  padding: 25px 0;
+}
+
+.main-logo {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+}

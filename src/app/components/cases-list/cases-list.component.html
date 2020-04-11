@@ -1,0 +1,18 @@
+<div *ngIf="!loading">
+  <ul class="cases-list">
+    <li class="cases-list__item" *ngFor="let cases of casesService.cases; let i = index">
+      <a href="#" class="cases-list__item-thumb">
+        <img src="{{cases.photo}}">
+      </a>
+      <div class="cases-list__item-desc">
+        <p class="cases-title">{{cases.title}}</p>
+        <div class="cases-bottom-descr">
+          <address class="cases-address">{{cases.location}}</address>
+          <span class="date-publice">05.04.20</span>
+        </div>
+      </div>
+      <a href="#" class="show-case" mat-raised-button>Детальніше</a>
+    </li>
+  </ul>
+</div>
+<p *ngIf="loading">Завантаження...</p>
