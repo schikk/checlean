@@ -11,7 +11,8 @@
           <span class="date-publice">05.04.20</span>
         </div>
       </div>
-      <a href="#" class="show-case" mat-raised-button>Детальніше</a>
+      <a [routerLink]="['/case-single', cases.id]" routerLinkActive="router-link-active" class="show-case"
+        mat-raised-button>Детальніше</a>
     </li>
   </ul>
 </div>
