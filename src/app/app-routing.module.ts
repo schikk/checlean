@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
   { path: '', component: PageNewCasesComponent },
   { path: 'in-process', component: PageCasesInProcessComponent },
-  { path: 'case-single/:id', component: PageCaseSingleComponent },
+  { path: 'case/:id', component: PageCaseSingleComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

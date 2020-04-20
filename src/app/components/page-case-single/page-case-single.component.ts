@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { Cases } from '../../interfaces/cases';
+import { CasesService } from '../../api/cases.service';
 
 @Component({
   selector: 'app-page-case-single',
@@ -9,14 +10,22 @@ import { switchMap } from 'rxjs/operators';
 })
 export class PageCaseSingleComponent implements OnInit {
 
-  id: number;
+  public case: Cases;
+  public loading = true;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    public casesService: CasesService
+  ) { }
+
   ngOnInit() {
-    this.route.paramMap.pipe(
-      switchMap(params => params.getAll('id'))
-    )
-      .subscribe(data => this.id = +data);
+
+    let caseId = this.route.snapshot.paramMap.get("id");
+    this.casesService.getCase(+caseId)
+      .subscribe((data: any) => {
+        this.case = data;
+        this.loading = false;
+      })
   }
 
 }

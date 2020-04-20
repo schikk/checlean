@@ -1,44 +1,59 @@
 {
   "cases": [
     {
-      "id": "1",
-      "title": "Сміття вздовж узбіччя",
+      "id": 1,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      "location": "вул. Кобзарська, 1",
+      "location": {
+        "longitude": 49.457857,
+        "latitude": 32.043704
+      },
       "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
-      "status": null
+      "status": "new",
+      "date": "20.04.20"
     },
     {
-      "id": "2",
-      "title": "Сміття вздовж узбіччя",
+      "id": 2,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      "location": "вул. Кобзарська, 2",
+      "location": {
+        "longitude": 49.457857,
+        "latitude": 32.043704
+      },
       "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
-      "status": null
+      "status": "new",
+      "date": "20.04.20"
     },
     {
-      "id": "3",
-      "title": "Сміття вздовж узбіччя",
+      "id": 3,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      "location": "вул. Кобзарська, 3",
-      "photo": "https://www.ekathimerini.com/resources/2019-08/trash-thumb-large.jpg",
-      "status": null
+      "location": {
+        "longitude": 49.457857,
+        "latitude": 32.043704
+      },
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
+      "status": "new",
+      "date": "20.04.20"
     },
     {
-      "id": "4",
-      "title": "Сміття вздовж узбіччя",
+      "id": 4,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      "location": "вул. Кобзарська, 4",
+      "location": {
+        "longitude": 49.457857,
+        "latitude": 32.043704
+      },
       "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
-      "status": null
+      "status": "new",
+      "date": "20.04.20"
     },
     {
-      "id": "5",
-      "title": "Сміття вздовж узбіччя",
+      "id": 5,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      "location": "вул. Кобзарська, 5",
+      "location": {
+        "longitude": 49.457857,
+        "latitude": 32.043704
+      },
       "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
-      "status": null
+      "status": "new",
+      "date": "20.04.20"
     }
   ]
 }

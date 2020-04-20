@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CasesService } from '../../shared/cases.service';
+import { Cases } from '../../interfaces/cases';
+import { CasesService } from '../../api/cases.service';
 
 @Component({
   selector: 'app-cases-list',
@@ -8,14 +9,19 @@ import { CasesService } from '../../shared/cases.service';
 })
 export class CasesListComponent implements OnInit {
 
-  public loading: boolean = true;
+  public loading = true;
+
+  cases: Cases[] = [];
 
   constructor(public casesService: CasesService) { }
 
   ngOnInit() {
-    this.casesService.fetchCases().subscribe(() => {
+
+    this.casesService.getCases().subscribe((data: Cases[]) => {
+      this.cases = data;
       this.loading = false;
     })
+
   }
 
 }
