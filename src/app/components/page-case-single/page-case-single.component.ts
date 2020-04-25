@@ -22,7 +22,7 @@ export class PageCaseSingleComponent implements OnInit {
 
     let caseId = this.route.snapshot.paramMap.get("id");
     this.casesService.getCase(+caseId)
-      .subscribe((data: any) => {
+      .subscribe((data: Cases) => {
         this.case = data;
         this.loading = false;
       })
