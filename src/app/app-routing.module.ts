@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNewCasesComponent } from './components/page-new-cases/page-new-cases.component';
-import { PageCasesInProcessComponent } from './components/page-cases-in-process/page-cases-in-process.component';
-import { PageCaseSingleComponent } from './components/page-case-single/page-case-single.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CasesListComponent } from './modules/cases/components/cases-list/cases-list.component';
+import { CaseSingleComponent } from './modules/cases/pages/case-single/case-single.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', component: PageNewCasesComponent },
-  { path: 'in-process', component: PageCasesInProcessComponent },
-  { path: 'case/:id', component: PageCaseSingleComponent },
+  { path: '', component: CasesListComponent },
+  { path: 'case/:id', component: CaseSingleComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
