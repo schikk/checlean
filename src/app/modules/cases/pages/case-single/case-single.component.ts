@@ -5,10 +5,10 @@ import { CasesService } from '../../api/cases.service';
 
 @Component({
   selector: 'app-page-case-single',
-  templateUrl: './page-case-single.component.html',
-  styleUrls: ['./page-case-single.component.scss']
+  templateUrl: './case-single.component.html',
+  styleUrls: ['./case-single.component.scss']
 })
-export class PageCaseSingleComponent implements OnInit {
+export class CaseSingleComponent implements OnInit {
 
   public case: Cases;
   public loading = true;
