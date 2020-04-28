@@ -1,13 +1,16 @@
 <div *ngIf="!loading">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+  </div>
   <ul class="cases-list">
-    <li class="cases-list__item" *ngFor="let case of cases">
+    <li class="cases-list__item" *ngFor="let case of cases | filter:term">
       <a href="#" class="cases-list__item-thumb">
         <img src="{{case.photo}}">
       </a>
       <div class="cases-list__item-desc">
-        <p class="cases-title">{{case.title}}</p>
+        <p class="cases-title">{{strSeparator(case.description, 30)}}</p>
         <div class="cases-bottom-descr">
-          <address class="cases-address">{{case.location}}</address>
+          <address class="cases-address">{{case.location.longitude}}<br>{{case.location.latitude}}</address>
           <span class="date-publice">05.04.20</span>
         </div>
       </div>

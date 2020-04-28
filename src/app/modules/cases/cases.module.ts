@@ -5,9 +5,10 @@ import { CasesListComponent } from './components/cases-list/cases-list.component
 import { MatButtonModule } from '@angular/material/button';
 import { CasesNavComponent } from './components/cases-nav/cases-nav.component';
 import { CaseSingleComponent } from './pages/case-single/case-single.component';
-
 import { AppRoutingModule } from '../../app-routing.module';
 import { MainCasesComponent } from './pages/main-cases/main-cases.component';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { MainCasesComponent } from './pages/main-cases/main-cases.component';
     CommonModule,
     BrowserModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   exports: [
     MainCasesComponent
