@@ -11,7 +11,7 @@ export class CasesListComponent implements OnInit {
 
   public loading = true;
 
-  public strSeparator = (str, length) => str.trim().length > length ? `${str.substr(0, length)}...` : str;
+  public strSeparator = (str: string, length: number) => str.trim().length > length ? `${str.substr(0, length)}...` : str;
 
   cases: Cases[] = [];
 

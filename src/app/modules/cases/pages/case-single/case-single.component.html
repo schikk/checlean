@@ -1,6 +1,7 @@
 <div *ngIf="!loading">
   <p class="description">{{case.description}}</p>
-  <img src="{{case.photo}}">
+  <img class="case-photo" src="{{case.photo}}">
   <p class="location">{{case.location}}</p>
+  <mat-slide-toggle>Завершити заявку</mat-slide-toggle>
 </div>
 <p *ngIf="loading">Завантаження...</p>

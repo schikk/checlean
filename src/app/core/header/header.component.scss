@@ -1,11 +1,16 @@
 .main-header {
-  padding: 25px 0;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
 }
 
 .main-logo {
   display: block;
-  max-width: 250px;
-  margin: 0 auto;
+  max-width: 150px;
 
   &__image {
     display: block;

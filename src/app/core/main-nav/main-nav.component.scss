@@ -1,0 +1,21 @@
+.main-nav {
+  margin-bottom: 30px;
+
+  &__link {
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #424242;
+
+    .mat-icon {
+      margin-right: 5px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+  }
+
+}

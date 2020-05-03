@@ -1,0 +1,56 @@
+.search-form {
+  min-width: 150px;
+  max-width: 388px;
+  width: 100%;
+  color: #424242;
+}
+
+.search-full-width {
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-btn {
+  display: block;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+::ng-deep .mat-form-field {
+  .mat-input-element {
+      color: slategray;
+  }
+  .mat-form-field-label {
+      color: slategray;
+  }
+  .mat-form-field-underline {
+      background-color: slategray;
+  }
+  .mat-form-field-ripple {
+      background-color: slategray;
+  }
+  .mat-form-field-required-marker {
+      color: slategray;
+  }
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+      color: #25732E;
+  }
+  .mat-form-field-ripple {
+      background-color: #25732E;
+  }
+  .mat-form-field-required-marker {
+      color: #25732E;
+  }
+  .mat-input-element {
+      color: #25732E;
+  }
+}
