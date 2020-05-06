@@ -54,3 +54,39 @@
       color: #25732E;
   }
 }
+
+.search-result {
+  position: absolute;
+  top: 40px;
+  background: #FFF;
+  z-index: 1;
+  width: 95%;
+  padding: 20px 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  &__item {
+    border-bottom: 1px solid #424242;
+    padding: 0 10px 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .show-case {
+    display: block;
+    text-decoration: none;
+    color: #424242;
+    font-size: 14px;
+    transition: color .3s;
+
+    &:hover {
+      color: #25732E;
+    }
+
+  }
+
+}
+

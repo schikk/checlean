@@ -6,7 +6,7 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 
 const routes: Routes = [
   { path: '', component: CasesListComponent },
-  { path: 'case/:id', component: CaseSingleComponent },
+  { path: 'cases/:id', component: CaseSingleComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

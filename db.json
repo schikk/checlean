@@ -109,6 +109,17 @@
       "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
       "status": "new",
       "date": "20.04.20"
+    },
+    {
+      "id": 11,
+      "description": "Черкаси ipsum dolor sit amet consectetur adipisicing elit.",
+      "location": {
+        "longitude": 49.457857,
+        "latitude": 32.043704
+      },
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Israel_3_002.Trash.jpg",
+      "status": "new",
+      "date": "20.04.20"
     }
   ]
 }

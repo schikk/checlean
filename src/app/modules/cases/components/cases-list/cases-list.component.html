@@ -1,7 +1,8 @@
+<h1 class="main-title">Список звернень</h1>
 <div *ngIf="!loading">
   <ul class="cases-list">
     <li class="cases-list__item" *ngFor="let case of cases">
-      <a [routerLink]="['/case', case.id]" class="cases-list__item-thumb">
+      <a [routerLink]="['/cases', case.id]" class="cases-list__item-thumb">
         <img src="{{case.photo}}">
       </a>
       <div class="cases-list__item-desc">
@@ -9,7 +10,7 @@
         <address class="cases-address">вул. Грушевського 10</address>
       </div>
       <div class="cases-bottom">
-        <a [routerLink]="['/case', case.id]" class="show-case" mat-raised-button>Детальніше</a>
+        <a [routerLink]="['/cases', case.id]" class="show-case" mat-raised-button>Детальніше</a>
         <span class="date-publice">05.04.20</span>
       </div>
     </li>
