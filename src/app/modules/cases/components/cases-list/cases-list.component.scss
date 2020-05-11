@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  padding-bottom: 80px;
 
   &__item {
     list-style: none;
@@ -76,4 +77,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.load-more-btn {
+  grid-column: 2 / span 1;
 }

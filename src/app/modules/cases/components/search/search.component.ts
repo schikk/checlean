@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cases } from '../../interfaces/cases';
+import { Case } from '../../interfaces/case';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { CasesService } from '../../api/cases.service';
@@ -11,7 +11,7 @@ import { CasesService } from '../../api/cases.service';
 })
 export class SearchComponent implements OnInit {
 
-  cases$: Observable<Cases[]>;
+  cases$: Observable<Case[]>;
 
   private searchTerms = new Subject<string>();
 

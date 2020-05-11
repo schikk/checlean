@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Cases } from '../interfaces/cases';
+import { Case } from '../interfaces/case';
 import { MessageService } from '../message.service';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -17,26 +17,26 @@ export class CasesService {
 
   /* Get cases */
 
-  public getCases() {
-    return this.httpClient.get(`${this.api}/cases`);
+  public getCases(page: number = 1) {
+    return this.httpClient.get(`${this.api}/cases?_page=${page}&_limit=6`);
   }
 
   /* Get case by id */
 
   public getCase(caseId: number) {
     const url = `${this.api}/cases/${caseId}`;
-    return this.httpClient.get<Cases>(url);
+    return this.httpClient.get<Case>(url);
   }
 
   /* Search cases */
 
-  searchCases(term: string): Observable<Cases[]> {
+  searchCases(term: string): Observable<Case[]> {
     if (!term.trim()) {
       return of([]);
     }
-    return this.httpClient.get<Cases[]>(`${this.api}/cases/?q=${term}`).pipe(
+    return this.httpClient.get<Case[]>(`${this.api}/cases/?q=${term}`).pipe(
       tap(_ => this.log(`found cases matching "${term}"`)),
-      catchError(this.handleError<Cases[]>('searchHeroes', []))
+      catchError(this.handleError<Case[]>('searchHeroes', []))
     );
   }
 

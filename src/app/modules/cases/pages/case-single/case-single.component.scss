@@ -6,4 +6,30 @@
   display: block;
   max-width: 100%;
   height: auto;
+  margin-bottom: 20px;
+}
+
+.cases-address {
+  font-size: 12px;
+  font-weight: 400;
+  color: #636363;
+  line-height: 1;
+  display: inline-block;
+  margin-right: 18px;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: auto;
+    background-image: url('/assets/icons/location.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
 }

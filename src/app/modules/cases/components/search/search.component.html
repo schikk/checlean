@@ -2,7 +2,7 @@
   <mat-form-field class="search-full-width">
     <mat-label>Пошук</mat-label>
     <div class="search-container" (click)=toggleDisplay()>
-      <input matInput placeholder="Пошук" #searchInput (keyup)="search(searchInput.value)">
+      <input matInput placeholder="Пошук" #searchInput (keyup)="search(searchInput.value)" autocomplete="off">
       <button (click)="search(searchInput.value)" class="search-btn">
         <mat-icon>search</mat-icon>
       </button>

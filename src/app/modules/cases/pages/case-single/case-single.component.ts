@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Cases } from '../../interfaces/cases';
+import { Case } from '../../interfaces/case';
 import { CasesService } from '../../api/cases.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { CasesService } from '../../api/cases.service';
 })
 export class CaseSingleComponent implements OnInit {
 
-  public case: Cases;
+  public case: Case;
   public loading = true;
 
   constructor(
@@ -22,7 +22,7 @@ export class CaseSingleComponent implements OnInit {
 
     let caseId = this.route.snapshot.paramMap.get("id");
     this.casesService.getCase(+caseId)
-      .subscribe((data: Cases) => {
+      .subscribe((data: Case) => {
         this.case = data;
         this.loading = false;
       })

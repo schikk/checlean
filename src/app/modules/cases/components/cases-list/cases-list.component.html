@@ -1,4 +1,5 @@
 <h1 class="main-title">Список звернень</h1>
+<app-search></app-search>
 <div *ngIf="!loading">
   <ul class="cases-list">
     <li class="cases-list__item" *ngFor="let case of cases">
@@ -14,6 +15,7 @@
         <span class="date-publice">05.04.20</span>
       </div>
     </li>
+    <button class="load-more-btn" *ngIf="isLoadMore" (click)=onClick() mat-raised-button>Завантажити ще</button>
   </ul>
 </div>
 <p *ngIf="loading">Завантаження...</p>
