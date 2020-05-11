@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  example:
+    container_name: example
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '4200:4200'
