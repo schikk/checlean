@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Case } from '../interfaces/case';
+import { Case, CaseStatus } from '../interfaces/case';
 import { MessageService } from '../message.service';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
@@ -18,7 +18,7 @@ export class CasesService {
   /* Get cases */
 
   public getCases(page: number = 1) {
-    return this.httpClient.get(`${this.api}/cases?_page=${page}&_limit=6`);
+    return this.httpClient.get(`${this.api}/cases`);
   }
 
   /* Get case by id */
@@ -26,6 +26,29 @@ export class CasesService {
   public getCase(caseId: number) {
     const url = `${this.api}/cases/${caseId}`;
     return this.httpClient.get<Case>(url);
+  }
+
+  /* Change case status */
+
+  public changeCaseStatus(caseId: number, caseStatus: CaseStatus): Observable<void> {
+    switch (caseStatus) {
+      case CaseStatus.ACTIVE:
+        return this.unresolveCase(caseId);
+      case CaseStatus.RESOLVED:
+        return this.resolveCase(caseId);
+      default:
+        return throwError(new Error('Unknown status: ' + caseStatus));
+    }
+  }
+
+  private resolveCase(caseId: number): Observable<void> {
+    const url = `${this.api}/cases/${caseId}/resolve`;
+    return this.httpClient.patch<void>(url, null);
+  }
+
+  private unresolveCase(caseId: number): Observable<void> {
+    const url = `${this.api}/cases/${caseId}/unresolve`;
+    return this.httpClient.patch<void>(url, null);
   }
 
   /* Search cases */
@@ -36,7 +59,7 @@ export class CasesService {
     }
     return this.httpClient.get<Case[]>(`${this.api}/cases/?q=${term}`).pipe(
       tap(_ => this.log(`found cases matching "${term}"`)),
-      catchError(this.handleError<Case[]>('searchHeroes', []))
+      catchError(this.handleError<Case[]>('searchCases', []))
     );
   }
 

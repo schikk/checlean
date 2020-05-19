@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Case } from '../../interfaces/case';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { Case } from '../../interfaces/case';
 import { CasesService } from '../../api/cases.service';
 
 @Component({

@@ -31,7 +31,7 @@ export class CasesListComponent implements OnInit {
   }
 
   onClick() {
-    this.page++
+    this.page++;
     this.loadCases();
   }
 

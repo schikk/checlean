@@ -2,6 +2,23 @@
   padding-right: 50px;
 }
 
+.case-container {
+  padding: 0 100px 100px 0;
+}
+
+.case-date {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #636363;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.description {
+  margin: 0 0 20px;
+}
+
 .case-photo {
   display: block;
   max-width: 100%;
@@ -32,4 +49,39 @@
     background-size: contain;
   }
 
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.case-status {
+  display: flex;
+
+  &__label {
+    margin-right: 15px;
+  }
+
+  .mat-radio-button {
+    margin-right: 15px;
+  }
+
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-outer-circle {
+  border-color: #424242 !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #25732E!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+ border-color:#25732E!important; /*outer ring color change*/
 }

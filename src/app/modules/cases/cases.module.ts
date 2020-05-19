@@ -7,9 +7,10 @@ import { CaseSingleComponent } from './pages/case-single/case-single.component';
 import { AppRoutingModule } from '../../app-routing.module';
 import { MainCasesComponent } from './pages/main-cases/main-cases.component';
 import { MatInputModule } from '@angular/material/input';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatRadioModule } from '@angular/material/radio';
 import { SearchComponent } from './components/search/search.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,8 +25,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     AppRoutingModule,
     MatInputModule,
-    MatSlideToggleModule,
-    MatIconModule
+    MatRadioModule,
+    MatIconModule,
+    FormsModule
   ],
   exports: [
     MainCasesComponent

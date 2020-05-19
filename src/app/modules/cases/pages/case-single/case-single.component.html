@@ -1,8 +1,15 @@
-<div *ngIf="!loading">
+<div *ngIf="!loading" class="case-container">
   <h1 class="case-inner-title">Звернення №{{case.id}}</h1>
-  <p class="description">{{case.description}}</p>
-  <img class="case-photo" src="{{case.photo}}">
-  <address class="cases-address">вул. Грушевського 10</address>
-  <!-- <mat-slide-toggle>Завершити заявку</mat-slide-toggle> -->
+  <span class="case-date">{{case.created_at}}</span>
+  <p class="description">{{case.details}}</p>
+  <img class="case-photo" src="{{case.image_url}}">
+  <address class="cases-address">{{case.location.address}}</address>
+  <div class="case-status">
+    <label class="case-status__label" id="example-radio-group-label">Оберіть статус заявки: </label>
+    <mat-radio-group class="case-status__group" #radioGroup="matRadioGroup" (change)="onStatusChange(radioGroup.value)">
+      <mat-radio-button [value]="CaseStatus.ACTIVE">Нова</mat-radio-button>
+      <mat-radio-button [value]="CaseStatus.RESOLVED">Завершена</mat-radio-button>
+    </mat-radio-group>
+  </div>
 </div>
 <p *ngIf="loading">Завантаження...</p>
