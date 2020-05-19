@@ -8,7 +8,7 @@
       </button>
       <ul class="search-result" [hidden]="isHide">
         <li class="search-result__item" *ngFor="let case of cases$ | async">
-          <a class="search-result__link" [routerLink]="['/cases', case.id]" class="show-case">{{case.description}}</a>
+          <a class="search-result__link" [routerLink]="['/cases', case.id]" class="show-case">{{case.details}}</a>
         </li>
       </ul>
     </div>

@@ -19,6 +19,7 @@ export class SearchComponent implements OnInit {
 
   public search(term: string): void {
     this.searchTerms.next(term);
+    console.log(this.cases$);
   }
 
   ngOnInit(): void {

@@ -57,7 +57,7 @@ export class CasesService {
     if (!term.trim()) {
       return of([]);
     }
-    return this.httpClient.get<Case[]>(`${this.api}/cases/?q=${term}`).pipe(
+    return this.httpClient.get<Case[]>(`${this.api}/cases/?details=${term}`).pipe(
       tap(_ => this.log(`found cases matching "${term}"`)),
       catchError(this.handleError<Case[]>('searchCases', []))
     );

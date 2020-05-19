@@ -1,7 +1,7 @@
 export interface Case {
   id: number;
   details: string;
-  location: Location[];
+  location: Location;
   image_url: string;
   status: CaseStatus;
   created_at: string;
