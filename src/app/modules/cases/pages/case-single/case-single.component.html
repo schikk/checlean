@@ -5,8 +5,8 @@
       <label class="case-status__label" id="example-radio-group-label">Поточний статус заявки: </label>
       <mat-radio-group class="case-status__group" #radioGroup="matRadioGroup"
         (change)="onStatusChange(radioGroup.value)">
-        <mat-radio-button [value]="CaseStatus.ACTIVE">Нова</mat-radio-button>
-        <mat-radio-button [value]="CaseStatus.RESOLVED">Завершена</mat-radio-button>
+        <mat-radio-button [value]="CaseStatus.ACTIVE" [checked]="case.status === 0">Нова</mat-radio-button>
+        <mat-radio-button [value]="CaseStatus.RESOLVED" [checked]="case.status === 1">Завершена</mat-radio-button>
       </mat-radio-group>
     </div>
   </div>
