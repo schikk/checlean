@@ -10,7 +10,8 @@ import { CasesService } from '../../api/cases.service';
 export class CasesListComponent implements OnInit {
 
   public loading = true;
-  private page = 1;
+  private page = 0;
+  private caseLoad = 15;
   public isLoadMore = true;
 
   public strSeparator = (str: string, length: number) => str.trim().length > length ? `${str.substr(0, length)}...` : str;
@@ -22,16 +23,16 @@ export class CasesListComponent implements OnInit {
   loadCases() {
 
     this.casesService.getCases(this.page).subscribe((data: Case[]) => {
-      this.cases = this.cases.concat(data);
+      this.cases = this.cases.concat(data['results']);
       this.loading = false;
-      if (data.length < 6) {
+      if (data['results'].length < this.caseLoad) {
         this.isLoadMore = false;
       }
     })
   }
 
   onClick() {
-    this.page++;
+    this.page = this.page + this.caseLoad;
     this.loadCases();
   }
 

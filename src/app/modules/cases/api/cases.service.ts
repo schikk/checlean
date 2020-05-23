@@ -17,8 +17,8 @@ export class CasesService {
 
   /* Get cases */
 
-  public getCases(page: number = 1) {
-    return this.httpClient.get(`${this.api}/cases`);
+  public getCases(page: number = 0) {
+    return this.httpClient.get(`${this.api}/cases?offset=${page}&limit=15`);
   }
 
   /* Get case by id */
@@ -53,15 +53,21 @@ export class CasesService {
 
   /* Search cases */
 
-  searchCases(term: string): Observable<Case[]> {
+  public searchCases(term: string): Observable<Case[]> {
     if (!term.trim()) {
       return of([]);
     }
-    return this.httpClient.get<Case[]>(`${this.api}/cases/?details=${term}`).pipe(
+    return this.httpClient.get<Case[]>(`${this.api}/cases?details=${term}`).pipe(
       tap(_ => this.log(`found cases matching "${term}"`)),
       catchError(this.handleError<Case[]>('searchCases', []))
     );
   }
+
+  // searchFetch = async (searchText) => {
+  //   const response = await fetch(`${this.api}/cases?details=${searchText}`);
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
 
   /**
    * Handle Http operation that failed.
