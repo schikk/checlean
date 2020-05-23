@@ -12,7 +12,7 @@
       </div>
       <div class="cases-bottom">
         <a [routerLink]="['/cases', case.id]" class="show-case" mat-raised-button>Детальніше</a>
-        <span class="date-publice">{{case.created_at}}</span>
+        <span class="date-publice">{{case.created_at | date:'d.MM.y, H:mm'}}</span>
       </div>
     </li>
     <button class="load-more-btn" *ngIf="isLoadMore" (click)=onClick() mat-raised-button>Завантажити ще</button>

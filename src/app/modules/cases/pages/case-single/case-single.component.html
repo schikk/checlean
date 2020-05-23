@@ -10,7 +10,7 @@
       </mat-radio-group>
     </div>
   </div>
-  <span class="case-date">{{case.created_at}}</span>
+  <span class="case-date">{{case.created_at | date:'d.MM.y, H:mm'}}</span>
   <p class="description">{{case.details}}</p>
   <img class="case-photo" src="{{case.image_url}}">
   <address class="cases-address">{{case.location.address}}</address>
