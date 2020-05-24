@@ -28,7 +28,6 @@ export class CaseSingleComponent implements OnInit {
       .subscribe((data: Case) => {
         this.case = data[0];
         this.loading = false;
-        console.log(this.case);
       })
 
   }

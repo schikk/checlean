@@ -1,6 +1,6 @@
 <div *ngIf="!loading" class="case-container">
   <div class="case-container__heading">
-    <h1 class="case-inner-title">Звернення №{{case.id}}</h1>
+    <h1 class="case-inner-title">Звернення № {{case.id}}</h1>
     <div class="case-status">
       <label class="case-status__label" id="example-radio-group-label">Поточний статус заявки: </label>
       <mat-radio-group class="case-status__group" #radioGroup="matRadioGroup"
@@ -12,7 +12,17 @@
   </div>
   <span class="case-date">{{case.created_at | date:'d.MM.y, H:mm'}}</span>
   <p class="description">{{case.details}}</p>
-  <img class="case-photo" src="{{case.image_url}}">
+  <div class="case-photo-container">
+    <a href="{{case.image_url}}" class="case-photo-link" target="_blank">
+      <img class="case-photo" src="{{case.image_url}}">
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&query={{case.location.latitude}},{{case.location.longitude}}"
+      class="case-map" target="_blank">
+      <img
+        src="https://maps.googleapis.com/maps/api/staticmap?center={{case.location.latitude}},{{case.location.longitude}}&zoom=16&size=600x400&maptype=roadmap&markers=color:green%7Clabel:%7C{{case.location.latitude}},{{case.location.longitude}}&key=AIzaSyBMXMR7rs6n0ghM-qf6GLvw-SjS9sWbgbs"
+        class="case-map-img">
+    </a>
+  </div>
   <address class="cases-address">{{case.location.address}}</address>
 </div>
 <p *ngIf="loading">Завантаження...</p>
