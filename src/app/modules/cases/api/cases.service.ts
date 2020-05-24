@@ -51,6 +51,18 @@ export class CasesService {
     return this.httpClient.patch<void>(url, null);
   }
 
+  // Get new cases
+
+  public getNewCases(page: number = 0) {
+    return this.httpClient.get(`${this.api}/cases?offset=${page}&limit=15&status=0`);
+  }
+
+  // Get finished cases
+
+  public getFinishedCases(page: number = 0) {
+    return this.httpClient.get(`${this.api}/cases?offset=${page}&limit=15&status=1`);
+  }
+
   /* Search cases */
 
   public searchCases(term: string): Observable<Case[]> {
@@ -62,12 +74,6 @@ export class CasesService {
       catchError(this.handleError<Case[]>('searchCases', []))
     );
   }
-
-  // searchFetch = async (searchText) => {
-  //   const response = await fetch(`${this.api}/cases?details=${searchText}`);
-  //   const data = await response.json();
-  //   console.log(data);
-  // }
 
   /**
    * Handle Http operation that failed.
