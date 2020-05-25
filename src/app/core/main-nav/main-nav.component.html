@@ -1,14 +1,14 @@
 <nav class="main-nav">
   <h3 class="nav-title">Звернення:</h3>
-  <a [routerLink]="['/']" routerLinkActive="router-link-active" class="main-nav__link">
+  <a [routerLink]="['/cases/all']" routerLinkActive="router-link-active" class="main-nav__link">
     <mat-icon>inbox</mat-icon>
     Всі
   </a>
-  <a href="#" class="main-nav__link">
+  <a [routerLink]="['/cases/new']" routerLinkActive="router-link-active" class="main-nav__link">
     <mat-icon>how_to_vote</mat-icon>
     Нові
   </a>
-  <a href="#" class="main-nav__link">
+  <a [routerLink]="['/cases/finished']" routerLinkActive="router-link-active" class="main-nav__link">
     <mat-icon>assignment_turned_in</mat-icon>
     Завершені
   </a>
