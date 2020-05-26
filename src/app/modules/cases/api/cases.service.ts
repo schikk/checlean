@@ -9,7 +9,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 export class CasesService {
 
-  private api = 'http://34.70.97.27:3000/cases';
+  private api = 'http://34.70.97.27:3000';
 
   constructor(
     private httpClient: HttpClient,
