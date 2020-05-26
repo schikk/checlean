@@ -4,12 +4,13 @@ import { Case, CaseStatus } from '../interfaces/case';
 import { MessageService } from '../message.service';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 
 export class CasesService {
 
-  private api = 'http://34.70.97.27:3000';
+  private api = environment.apiUrl;
 
   constructor(
     private httpClient: HttpClient,
