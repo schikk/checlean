@@ -13,6 +13,7 @@ export class CasesListComponent implements OnInit {
   private page = 0;
   private caseLoad = 15;
   public isLoadMore = true;
+  totalCases = 0;
 
   public strSeparator = (str: string, length: number) => str.trim().length > length ? `${str.substr(0, length)}...` : str;
 
@@ -23,6 +24,7 @@ export class CasesListComponent implements OnInit {
   loadCases() {
 
     this.casesService.getCases(this.page).subscribe((data: Case[]) => {
+      this.totalCases = data['total_count'];
       this.cases = this.cases.concat(data['results']);
       this.loading = false;
       if (data['results'].length < this.caseLoad) {

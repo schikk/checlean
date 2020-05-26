@@ -37,6 +37,7 @@ export class SearchComponent implements OnInit {
         switchMap((term: string) => this.casesService.searchCases(term)),
         map((data) => data['results'])
       );
+
   }
 
 }
