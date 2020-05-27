@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  frontend:
+    container_name: checlean_frontend_production
+    build:
+      context: ../../
+      dockerfile: ./deployment/production/Dockerfile
+    ports:
+      - 4200:80

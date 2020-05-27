@@ -1,14 +1,15 @@
 version: '3'
-
 services:
-
-  example:
-    container_name: example
-    build:
-      context: .
-      dockerfile: Dockerfile
+  frontend:
+    container_name: checlean_frontend
+    build: .
+    command: npm start -- --host 0.0.0.0 --disable-host-check
+    tty: true
     volumes:
-      - '.:/app'
-      - '/app/node_modules'
+      - .:/app
+      - data-frontend-libs:/app/node_modules
     ports:
-      - '4200:4200'
+      - 4200:4200
+volumes:
+  data-frontend-libs:
+    driver: local
