@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Case, CaseStatus } from '../../interfaces/case';
 import { CasesService } from '../../api/cases.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-page-case-single',
@@ -14,11 +19,15 @@ export class CaseSingleComponent implements OnInit {
   public loading = true;
   public CaseStatus = CaseStatus;
 
+  horizontalPosition: MatSnackBarHorizontalPosition = 'right';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
   caseSingle = [];
 
   constructor(
     private route: ActivatedRoute,
-    public casesService: CasesService
+    public casesService: CasesService,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -35,6 +44,14 @@ export class CaseSingleComponent implements OnInit {
   onStatusChange(value: CaseStatus) {
     let caseId = this.case.id;
     this.casesService.changeCaseStatus(caseId, value).subscribe();
+  }
+
+  openSnackBar(status) {
+    this._snackBar.open('Статус заявки змнінено на:', status, {
+      duration: 2000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
   }
 
 }

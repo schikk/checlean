@@ -27,7 +27,7 @@ export class FinishedCasesComponent implements OnInit {
       this.totalCases = data['total_count'];
       this.cases = this.cases.concat(data['results']);
       this.loading = false;
-      if (data['results'].length <= this.caseLoad) {
+      if (data['results'].length < this.caseLoad) {
         this.isLoadMore = false;
       }
     })

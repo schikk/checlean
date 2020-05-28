@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { NewCasesComponent } from './pages/new-cases/new-cases.component';
 import { FinishedCasesComponent } from './pages/finished-cases/finished-cases.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FinishedCasesComponent } from './pages/finished-cases/finished-cases.co
     MatInputModule,
     MatRadioModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   exports: [
     AllCasesComponent

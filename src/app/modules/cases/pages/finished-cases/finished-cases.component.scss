@@ -12,6 +12,8 @@
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
     background: #FFF;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 
     &-desc {
       padding: 20px 0;
@@ -77,6 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .load-more-btn {

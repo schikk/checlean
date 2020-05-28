@@ -7,8 +7,8 @@ import { NewCasesComponent } from './modules/cases/pages/new-cases/new-cases.com
 import { FinishedCasesComponent } from './modules/cases/pages/finished-cases/finished-cases.component';
 
 const routes: Routes = [
-  { path: '', component: CasesListComponent },
   { path: 'cases/all', component: CasesListComponent },
+  { path: '', redirectTo: 'cases/all', pathMatch: 'full' },
   { path: 'cases/new', component: NewCasesComponent },
   { path: 'cases/finished', component: FinishedCasesComponent },
   { path: 'cases/:id', component: CaseSingleComponent },
