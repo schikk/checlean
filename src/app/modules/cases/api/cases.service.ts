@@ -64,6 +64,12 @@ export class CasesService {
     return this.httpClient.get(`${this.api}/cases?offset=${page}&limit=15&status=1`);
   }
 
+  // Delete case
+
+  public deleteCase(caseId: number) {
+    return this.httpClient.delete(`${this.api}/cases/${caseId}`);
+  }
+
   /* Search cases */
 
   public searchCases(term: string): Observable<Case[]> {

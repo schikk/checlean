@@ -8,12 +8,14 @@ import { AppRoutingModule } from '../../app-routing.module';
 import { AllCasesComponent } from './pages/all-cases/all-cases.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
 import { SearchComponent } from './components/search/search.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { NewCasesComponent } from './pages/new-cases/new-cases.component';
 import { FinishedCasesComponent } from './pages/finished-cases/finished-cases.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AllCasesComponent,
     SearchComponent,
     NewCasesComponent,
-    FinishedCasesComponent
+    FinishedCasesComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     CommonModule,
@@ -33,10 +36,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatRadioModule,
     MatIconModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   exports: [
-    AllCasesComponent
+    AllCasesComponent,
+    MatDialogModule
   ]
 })
 export class CasesModule { }

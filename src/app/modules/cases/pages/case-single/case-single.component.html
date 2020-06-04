@@ -27,5 +27,6 @@
         class="case-map-img">
     </a>
   </div>
+  <button mat-raised-button color="warn" (click)="onDelete(case.id)">Видалити заявку</button>
 </div>
 <p *ngIf="loading">Завантаження...</p>
