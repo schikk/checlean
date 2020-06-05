@@ -8,7 +8,7 @@
         <img src="{{case.image_url}}">
       </a>
       <div class="cases-list__item-desc">
-        <p class="cases-title">{{strSeparator(case.details, 60)}}</p>
+        <a [routerLink]="['/cases', case.id]" class="cases-title">{{strSeparator(case.details, 60)}}</a>
         <address class="cases-address">{{case.location.address}}</address>
       </div>
       <div class="cases-bottom">

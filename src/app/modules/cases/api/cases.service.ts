@@ -82,6 +82,12 @@ export class CasesService {
     );
   }
 
+  /* Get all cases for map */
+
+  public getMapCases() {
+    return this.httpClient.get(`${this.api}/cases`);
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

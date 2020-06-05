@@ -39,8 +39,12 @@
 }
 
 .cases-title {
+  display: block;
   font-size: 18px;
   font-weight: 500;
+  margin: 0 0 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .cases-bottom-descr {

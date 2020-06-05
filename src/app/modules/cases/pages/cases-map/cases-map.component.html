@@ -1,0 +1,20 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false"
+  (mapClick)="mapClicked($event)">
+
+  <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)"
+    [latitude]="m.location.latitude" [longitude]="m.location.longitude" [markerDraggable]="m.draggable"
+    (dragEnd)="markerDragEnd(m, $event)" [iconUrl]="
+    {
+        url: m.status === 0 ? 'https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|25732E' : 'https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|E53935'
+    }">
+
+    <agm-info-window>
+      <a [routerLink]="['/cases', m.id]" class="cases-info">
+        <span class="cases-info__title">{{strSeparator(m.details, 60)}}</span>
+        <img class="cases-info__img" src="{{m.image_url}}">
+      </a>
+    </agm-info-window>
+
+  </agm-marker>
+
+</agm-map>
