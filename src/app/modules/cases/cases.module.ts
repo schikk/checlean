@@ -16,6 +16,8 @@ import { NewCasesComponent } from './pages/new-cases/new-cases.component';
 import { FinishedCasesComponent } from './pages/finished-cases/finished-cases.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { CasesMapComponent } from './pages/cases-map/cases-map.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     SearchComponent,
     NewCasesComponent,
     FinishedCasesComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    CasesMapComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,10 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     MatIconModule,
     FormsModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCRZ65-i9swlapnyVW_YtZsPxD2tvs8ruI'
+    })
   ],
   exports: [
     AllCasesComponent,

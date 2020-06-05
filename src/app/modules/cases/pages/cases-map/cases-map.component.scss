@@ -1,0 +1,25 @@
+agm-map {
+  height: 75vh;
+}
+
+.cases-info {
+  text-decoration: none;
+  color: inherit;
+
+  &__title {
+    display: block;
+    max-width: 300px;
+    font-weight: normal;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+}
