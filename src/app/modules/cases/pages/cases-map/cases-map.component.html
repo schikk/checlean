@@ -5,7 +5,11 @@
     [latitude]="m.location.latitude" [longitude]="m.location.longitude" [markerDraggable]="m.draggable"
     (dragEnd)="markerDragEnd(m, $event)" [iconUrl]="
     {
-        url: m.status === 0 ? 'https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|25732E' : 'https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|E53935'
+        url: m.status === 0 ? 'https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|E53935' : 'https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|25732E',
+        scaledSize: {
+          width: 25,
+          height: 37
+      }
     }">
 
     <agm-info-window>
