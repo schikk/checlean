@@ -12,3 +12,19 @@
   }
 
 }
+
+@media screen and(max-width: 1000px) {
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+
+}
+
+@media screen and(max-width: 767px) {
+
+  .footer-copyright {
+    display: none;
+  }
+
+}

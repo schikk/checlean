@@ -116,3 +116,53 @@
 ::ng-deep .mat-snack-bar-container .mat-button-wrapper {
   color: #25732E !important;
 }
+
+@media screen and(max-width: 1000px) {
+
+  .case-container {
+    padding: 0 20px 50px 0;
+  }
+
+  .case-status {
+    flex-direction: column;
+
+    &__label {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+  }
+
+}
+
+@media screen and(max-width: 767px) {
+
+  .case-container {
+    padding: 0 0 50px 0;
+
+    &__heading {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+  }
+
+  .case-inner-title {
+    margin-bottom: 20px;
+  }
+
+  .case-status {
+    margin-bottom: 15px;
+  }
+
+  .case-photo-container {
+    flex-direction: column;
+  }
+
+  .case-photo-link,
+  .case-map {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+}

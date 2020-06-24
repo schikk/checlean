@@ -93,3 +93,24 @@
 .total__number {
   font-weight: 500;
 }
+
+@media screen and(max-width: 1000px) {
+
+  .cases-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .load-more-btn {
+    grid-column: 1/span 2;
+  }
+
+}
+
+@media screen and(max-width: 767px) {
+
+  .cases-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+}

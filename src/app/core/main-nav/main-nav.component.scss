@@ -25,3 +25,23 @@
   }
 
 }
+
+@media screen and(max-width: 767px) {
+
+  .main-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 0;
+
+    &__link {
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+}
