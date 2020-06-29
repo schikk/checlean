@@ -14,6 +14,8 @@
       <div class="cases-bottom">
         <a [routerLink]="['/cases', case.id]" class="show-case" mat-raised-button>Детальніше</a>
         <span class="date-publice">{{case.created_at | date:'d.MM.y, H:mm'}}</span>
+        <span [className]="case.status === 0 ? 'new case-status' : 'done case-status'"
+          title="Статус - {{case.status === 0 ? 'нове' : 'виконане'}} звернення"></span>
       </div>
     </li>
     <button class="load-more-btn" *ngIf="isLoadMore" (click)=onClick() mat-raised-button>Завантажити ще</button>

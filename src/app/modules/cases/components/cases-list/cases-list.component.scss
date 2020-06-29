@@ -94,6 +94,22 @@
   font-weight: 500;
 }
 
+.case-status {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.new.case-status {
+  background: #E53935;
+}
+
+.done.case-status {
+  background: #25732E;
+}
+
 @media screen and(max-width: 1000px) {
 
   .cases-list {
