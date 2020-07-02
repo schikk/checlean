@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   form: FormGroup;
   aSub: Subscription;
 
+  isError = false;
+
   hide = true;
 
   constructor(
@@ -40,7 +42,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.aSub = this.auth.login(this.form.value).subscribe(
       () => document.location.href = "/",
       error => {
-        console.warn(error)
+        console.warn(error);
+        this.isError = true;
         this.form.enable();
       }
     )
