@@ -58,3 +58,19 @@
 ::ng-deep .mat-raised-button[disabled] {
   background-color: rgba(0, 0, 0, 0.39) !important;
 }
+
+.error-mssg {
+  display: block;
+  color: tomato;
+  margin-bottom: 10px;
+  padding: 0 .75em 0 .75em;
+}
+
+@media screen and(max-width: 767px) {
+
+  .login-form {
+    width: 100%;
+    margin-right: 0;
+  }
+
+}

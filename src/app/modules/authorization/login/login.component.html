@@ -16,6 +16,7 @@
         </button>
       </mat-form-field>
     </div>
+    <span *ngIf="isError" class="error-mssg">Ви ввели не вірні дані</span>
     <div class="form-action">
       <button type="submit" class="login-form_submit" [disabled]="form.invalid || form.disabled" mat-raised-button>
         Увійти
