@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { NewCasesComponent } from './modules/cases/pages/new-cases/new-cases.component';
 import { FinishedCasesComponent } from './modules/cases/pages/finished-cases/finished-cases.component';
 import { CasesMapComponent } from './modules/cases/pages/cases-map/cases-map.component';
+import { LoginComponent } from './modules/authorization/login/login.component'
 
 const routes: Routes = [
   { path: 'cases/all', component: CasesListComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'cases/finished', component: FinishedCasesComponent },
   { path: 'cases/:id', component: CaseSingleComponent },
   { path: 'map', component: CasesMapComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
