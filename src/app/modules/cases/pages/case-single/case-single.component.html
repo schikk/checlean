@@ -1,7 +1,7 @@
 <div *ngIf="!loading" class="case-container">
   <div class="case-container__heading">
     <h1 class="case-inner-title">Звернення № {{case.id}}</h1>
-    <div class="case-status">
+    <div class="case-status" *ngIf="isAdmin">
       <label class="case-status__label" id="example-radio-group-label">Поточний статус заявки: </label>
       <mat-radio-group class="case-status__group" #radioGroup="matRadioGroup"
         (change)="onStatusChange(radioGroup.value)">
@@ -27,6 +27,6 @@
         class="case-map-img">
     </a>
   </div>
-  <button mat-raised-button color="warn" (click)="onDelete(case.id)">Видалити заявку</button>
+  <button *ngIf="isAdmin" mat-raised-button color="warn" (click)="onDelete(case.id)">Видалити заявку</button>
 </div>
 <p *ngIf="loading">Завантаження...</p>

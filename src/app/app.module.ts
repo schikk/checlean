@@ -10,6 +10,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { CasesModule } from './modules/cases/cases.module';
+import { AuthModule } from './modules/authorization/auth.module';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     HttpClientModule,
     CasesModule,
+    AuthModule,
     MatIconModule
   ],
   exports: [

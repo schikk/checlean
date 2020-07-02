@@ -24,6 +24,8 @@ export class CaseSingleComponent implements OnInit {
 
   caseSingle = [];
 
+  isAdmin = false;
+
   constructor(
     private route: ActivatedRoute,
     public casesService: CasesService,
@@ -41,6 +43,16 @@ export class CaseSingleComponent implements OnInit {
         this.loading = false;
       })
 
+    this.checkAdmin();
+
+  }
+
+  checkAdmin() {
+    const token = localStorage.getItem('auth-token');
+
+    if (token !== null) {
+      this.isAdmin = true;
+    }
   }
 
   onStatusChange(value: CaseStatus) {
