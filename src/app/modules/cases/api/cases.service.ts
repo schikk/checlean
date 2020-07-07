@@ -85,7 +85,7 @@ export class CasesService {
   /* Get all cases for map */
 
   public getMapCases() {
-    return this.httpClient.get(`${this.api}/cases`);
+    return this.httpClient.get(`${this.api}/cases?limit=1000`);
   }
 
   /**
