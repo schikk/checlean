@@ -2,7 +2,7 @@
   <blockquote class="admin-comment"><span class="admin-comment__position">Адміністратор:</span>
     {{caseComment.comment}}
   </blockquote>
-  <button *ngIf="isAdmin" mat-raised-button color="warn" (click)="deleteComment(caseComment.id)">Видалити
+  <button *ngIf="isAdmin" mat-raised-button color="warn" (click)="deleteComment()">Видалити
     коментар</button>
 </div>
 <form *ngIf="isAdmin" class="admin-comment-form" [formGroup]="form" (ngSubmit)="onSubmit()">
