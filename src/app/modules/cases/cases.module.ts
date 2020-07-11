@@ -11,13 +11,15 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SearchComponent } from './components/search/search.component';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewCasesComponent } from './pages/new-cases/new-cases.component';
 import { FinishedCasesComponent } from './pages/finished-cases/finished-cases.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { CasesMapComponent } from './pages/cases-map/cases-map.component';
 import { AgmCoreModule } from '@agm/core';
+import { AdminCommentComponent } from './components/admin-comment/admin-comment.component';
+import { InworkCasesComponent } from './pages/inwork-cases/inwork-cases.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AgmCoreModule } from '@agm/core';
     NewCasesComponent,
     FinishedCasesComponent,
     ConfirmDialogComponent,
-    CasesMapComponent
+    CasesMapComponent,
+    AdminCommentComponent,
+    InworkCasesComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +43,7 @@ import { AgmCoreModule } from '@agm/core';
     MatRadioModule,
     MatIconModule,
     FormsModule,
+    ReactiveFormsModule,
     MatSnackBarModule,
     MatDialogModule,
     AgmCoreModule.forRoot({

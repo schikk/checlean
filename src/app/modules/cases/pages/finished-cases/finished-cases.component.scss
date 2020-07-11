@@ -110,6 +110,10 @@
   background: #25732E;
 }
 
+.in-process.case-status {
+  background: orange;
+}
+
 @media screen and(max-width: 1000px) {
 
   .cases-list {

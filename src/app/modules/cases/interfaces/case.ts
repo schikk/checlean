@@ -5,6 +5,7 @@ export interface Case {
   image_url: string;
   status: CaseStatus;
   created_at: string;
+  comment?: string;
 }
 
 export interface Location {
@@ -15,5 +16,6 @@ export interface Location {
 
 export enum CaseStatus {
   ACTIVE = 0,
+  INWORK = 2,
   RESOLVED = 1
 }

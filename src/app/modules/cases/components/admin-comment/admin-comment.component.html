@@ -1,0 +1,14 @@
+<div *ngIf="isComment" class="admin-comment-container">
+  <blockquote class="admin-comment"><span class="admin-comment__position">Адміністратор:</span>
+    {{caseComment.comment}}
+  </blockquote>
+  <button *ngIf="isAdmin" mat-raised-button color="warn" (click)="deleteComment(caseComment.id)">Видалити
+    коментар</button>
+</div>
+<form *ngIf="isAdmin" class="admin-comment-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Коментар від адміністратора</mat-label>
+    <textarea formControlName="comment" matInput></textarea>
+  </mat-form-field>
+  <button [disabled]="form.invalid || form.disabled" mat-raised-button>Додати коментар</button>
+</form>

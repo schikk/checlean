@@ -34,23 +34,22 @@ export class CasesService {
   public changeCaseStatus(caseId: number, caseStatus: CaseStatus): Observable<void> {
     switch (caseStatus) {
       case CaseStatus.ACTIVE:
-        return this.unresolveCase(caseId);
+        return this.statusCase(caseId, caseStatus);
       case CaseStatus.RESOLVED:
-        return this.resolveCase(caseId);
+        return this.statusCase(caseId, caseStatus);
+      case CaseStatus.INWORK:
+        return this.statusCase(caseId, caseStatus);
       default:
         return throwError(new Error('Unknown status: ' + caseStatus));
     }
   }
 
-  private resolveCase(caseId: number): Observable<void> {
-    const url = `${this.api}/cases/${caseId}/resolve`;
-    return this.httpClient.patch<void>(url, null);
+  private statusCase(caseId: number, caseStatus: number): Observable<void> {
+    const body = { status: caseStatus };
+    const url = `${this.api}/cases/${caseId}/status`;
+    return this.httpClient.patch<void>(url, body);
   }
 
-  private unresolveCase(caseId: number): Observable<void> {
-    const url = `${this.api}/cases/${caseId}/unresolve`;
-    return this.httpClient.patch<void>(url, null);
-  }
 
   // Get new cases
 
@@ -62,6 +61,12 @@ export class CasesService {
 
   public getFinishedCases(page: number = 0) {
     return this.httpClient.get(`${this.api}/cases?offset=${page}&limit=15&status=1`);
+  }
+
+  // Get in work cases
+
+  public getInWorkCases(page: number = 0) {
+    return this.httpClient.get(`${this.api}/cases?offset=${page}&limit=15&status=2`);
   }
 
   // Delete case
@@ -86,6 +91,13 @@ export class CasesService {
 
   public getMapCases() {
     return this.httpClient.get(`${this.api}/cases?limit=1000`);
+  }
+
+  // Post admin comment
+
+  public postComment(comment: Case, caseId: number) {
+    const url = `${this.api}/cases/${caseId}/comment`;
+    return this.httpClient.patch<void>(url, comment);
   }
 
   /**

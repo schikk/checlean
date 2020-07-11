@@ -5,6 +5,7 @@ import { CaseSingleComponent } from './modules/cases/pages/case-single/case-sing
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { NewCasesComponent } from './modules/cases/pages/new-cases/new-cases.component';
 import { FinishedCasesComponent } from './modules/cases/pages/finished-cases/finished-cases.component';
+import { InworkCasesComponent } from './modules/cases/pages/inwork-cases/inwork-cases.component'
 import { CasesMapComponent } from './modules/cases/pages/cases-map/cases-map.component';
 import { LoginComponent } from './modules/authorization/login/login.component'
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'cases/all', pathMatch: 'full' },
   { path: 'cases/new', component: NewCasesComponent },
   { path: 'cases/finished', component: FinishedCasesComponent },
+  { path: 'cases/in-process', component: InworkCasesComponent },
   { path: 'cases/:id', component: CaseSingleComponent },
   { path: 'map', component: CasesMapComponent },
   { path: 'login', component: LoginComponent },
