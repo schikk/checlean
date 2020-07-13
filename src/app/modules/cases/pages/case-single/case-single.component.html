@@ -16,7 +16,11 @@
       </mat-radio-group>
     </div>
   </div>
-  <span class="case-date">{{case.created_at | date:'d.MM.y, H:mm'}}</span>
+  <div class="case-dates">
+    <span class="case-date">Створено: <b>{{case.created_at | date:'d.MM.y, H:mm'}}</b></span>
+    <span *ngIf="case.created_at !== case.updated_at" class="case-update case-date">Змінено:
+      <b>{{case.updated_at | date:'d.MM.y, H:mm'}}</b></span>
+  </div>
   <address class="cases-address">{{case.location.address}}</address>
   <p class="description">{{case.details}}</p>
   <div class="case-photo-container">
