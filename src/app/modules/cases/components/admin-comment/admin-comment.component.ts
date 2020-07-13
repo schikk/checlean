@@ -16,6 +16,7 @@ export class AdminCommentComponent implements OnInit {
   isComment = false;
   isAdmin = false;
   deletedValue: any = { comment: '' };
+  commentError = false;
 
   constructor(
     public casesService: CasesService,
@@ -41,9 +42,11 @@ export class AdminCommentComponent implements OnInit {
         this.caseComment = data[0];
         this.getUpdateComment();
         this.form.reset();
+        this.commentError = false;
       },
       error => {
         this.form.enable();
+        this.commentError = true;
         console.log('oops', error)
       }
     )

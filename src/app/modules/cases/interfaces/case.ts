@@ -5,6 +5,7 @@ export interface Case {
   image_url: string;
   status: CaseStatus;
   created_at: string;
+  updated_at?: string;
   comment?: string;
 }
 

@@ -18,6 +18,11 @@
   margin: 0;
 }
 
+.case-dates {
+  display: flex;
+  align-items: center;
+}
+
 .case-date {
   display: block;
   font-size: 14px;
@@ -25,6 +30,12 @@
   color: #636363;
   line-height: 1;
   margin-bottom: 20px;
+  margin-right: 20px;
+
+  b {
+    font-weight: 500;
+  }
+
 }
 
 .description {

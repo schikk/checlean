@@ -12,6 +12,7 @@
 }
 
 .admin-comment {
+  max-width: 900px;
   padding: .5rem 1rem;
   border-left: 3px solid #25732E;
 
@@ -21,6 +22,12 @@
     margin-right: 10px;
   }
 
+}
+
+.error-mssg {
+  display: block;
+  margin: 0 0 20px 0;
+  color: #f44336;
 }
 
 ::ng-deep .mat-form-field {

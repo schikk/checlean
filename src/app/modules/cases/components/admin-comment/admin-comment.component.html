@@ -10,5 +10,6 @@
     <mat-label>Коментар від адміністратора</mat-label>
     <textarea formControlName="comment" matInput></textarea>
   </mat-form-field>
+  <span *ngIf="commentError" class="error-mssg">Максимальна кількість символів - 1000</span>
   <button [disabled]="form.invalid || form.disabled" mat-raised-button>Додати коментар</button>
 </form>
