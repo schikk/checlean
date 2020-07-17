@@ -14,6 +14,20 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    &-comment-info {
+      display: none;
+      position: absolute;
+      background: #FFF;
+      padding: 15px;
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      right: 100px;
+      border-radius: 5px;
+      bottom: 33px;
+      border-left: 3px solid #25732e;
+    }
 
     &-desc {
       padding: 20px 0;
@@ -34,8 +48,27 @@
 
     }
 
+    &-admin {
+      font-weight: 500;
+      font-style: italic;
+      margin-right: 10px;
+    }
+
+    &-comment {
+      cursor: help;
+
+      &:hover + .cases-list__item-comment-info {
+        display: block;
+      }
+
+    }
+
   }
 
+}
+
+.comment-container {
+  display: flex;
 }
 
 .cases-title {
@@ -100,6 +133,7 @@
   height: 18px;
   border-radius: 50%;
   margin-right: 5px;
+  cursor: help;
 }
 
 .new.case-status {

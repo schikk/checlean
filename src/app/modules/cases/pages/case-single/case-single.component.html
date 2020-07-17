@@ -5,12 +5,14 @@
       <label class="case-status__label" id="example-radio-group-label">Поточний статус заявки: </label>
       <mat-radio-group class="case-status__group" #radioGroup="matRadioGroup"
         (change)="onStatusChange(radioGroup.value)">
-        <mat-radio-button [value]="CaseStatus.ACTIVE" [checked]="case.status === 0" (click)="openSnackBar('Нова')">Нова
+        <mat-radio-button class="case-status__new" [value]="CaseStatus.ACTIVE" [checked]="case.status === 0"
+          (click)="openSnackBar('Нова')">Нова
         </mat-radio-button>
-        <mat-radio-button [value]="CaseStatus.INWORK" [checked]="case.status === 2" (click)="openSnackBar('В роботі')">В
+        <mat-radio-button class="case-status__inwork" [value]="CaseStatus.INWORK" [checked]="case.status === 2"
+          (click)="openSnackBar('В роботі')">В
           роботі
         </mat-radio-button>
-        <mat-radio-button [value]="CaseStatus.RESOLVED" [checked]="case.status === 1"
+        <mat-radio-button class="case-status__done" [value]="CaseStatus.RESOLVED" [checked]="case.status === 1"
           (click)="openSnackBar('Завершена')">Завершена
         </mat-radio-button>
       </mat-radio-group>
