@@ -14,6 +14,15 @@
       <div class="cases-bottom">
         <a [routerLink]="['/cases', case.id]" class="show-case" mat-raised-button>Детальніше</a>
         <span class="date-publice">{{case.created_at | date:'d.MM.y, H:mm'}}</span>
+        <div *ngIf="case.comment !== ''" class="comment-container">
+          <span class="cases-list__item-comment material-icons">
+            mark_chat_unread
+          </span>
+          <div class="cases-list__item-comment-info">
+            <span class="cases-list__item-admin">Адміністратор:</span>
+            {{case.comment}}
+          </div>
+        </div>
         <span
           [className]="(case.status === 0) ? 'new case-status' : (case.status === 1) ? 'done case-status' : 'in-process case-status'"
           title="Статус - {{(case.status === 0) ? 'нове' : (case.status === 1) ? 'виконане' : 'в роботі'}} звернення"></span>

@@ -13,6 +13,22 @@
 
 }
 
+.soc-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+  text-decoration: none;
+  color: #424242;
+
+  svg {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+}
+
 @media screen and(max-width: 1000px) {
 
   .footer-copyright {

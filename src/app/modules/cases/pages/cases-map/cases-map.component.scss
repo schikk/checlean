@@ -22,4 +22,20 @@ agm-map {
     object-fit: cover;
   }
 
+  &__comment {
+    display: block;
+    padding: 0.5rem .5rem;
+    border-left: 3px solid #25732E;
+    margin-bottom: 15px;
+    max-width: 280px;
+    line-height: 1.4;
+
+    &-admin {
+      font-weight: 500;
+      font-style: italic;
+      margin-right: 10px;
+    }
+
+  }
+
 }

@@ -15,6 +15,10 @@
     <agm-info-window>
       <a [routerLink]="['/cases', m.id]" class="cases-info">
         <span class="cases-info__title">{{strSeparator(m.details, 60)}}</span>
+        <span *ngIf="m.comment !== ''" class="cases-info__comment">
+          <span class="cases-info__comment-admin">Адміністратор:</span>
+          <span>{{m.comment}}</span>
+        </span>
         <img class="cases-info__img" src="{{m.image_url}}">
       </a>
     </agm-info-window>

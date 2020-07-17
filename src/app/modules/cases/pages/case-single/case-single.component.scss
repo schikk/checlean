@@ -116,16 +116,40 @@
   border-color: #424242 !important;
 }
 
-::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+::ng-deep .mat-radio-button.case-status__done .mat-radio-inner-circle {
   background-color: #25732E!important;   /*inner circle color change*/
 }
 
-::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+::ng-deep.mat-radio-button.case-status__done.mat-accent.mat-radio-checked .mat-radio-outer-circle {
  border-color:#25732E!important; /*outer ring color change*/
 }
 
-::ng-deep .mat-snack-bar-container .mat-button-wrapper {
+::ng-deep .mat-snack-bar-container.case-status__done .mat-button-wrapper {
   color: #25732E !important;
+}
+
+::ng-deep .mat-radio-button.case-status__new .mat-radio-inner-circle {
+  background-color: #E53935!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.case-status__new.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+ border-color:#E53935!important; /*outer ring color change*/
+}
+
+::ng-deep .mat-snack-bar-container.case-status__new .mat-button-wrapper {
+  color: #E53935 !important;
+}
+
+::ng-deep .mat-radio-button.case-status__inwork .mat-radio-inner-circle {
+  background-color: orange!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.case-status__inwork.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+ border-color:orange!important; /*outer ring color change*/
+}
+
+::ng-deep .mat-snack-bar-container.case-status__inwork .mat-button-wrapper {
+  color: orange !important;
 }
 
 @media screen and(max-width: 1000px) {
@@ -159,6 +183,16 @@
     &__heading {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+  }
+
+  .case-date {
+    margin-right: 50px;
+
+    b {
+      margin-top: 5px;
+      display: block;
     }
 
   }
