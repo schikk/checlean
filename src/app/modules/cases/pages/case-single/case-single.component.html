@@ -17,6 +17,14 @@
         </mat-radio-button>
       </mat-radio-group>
     </div>
+    <div class="case-status-bar" *ngIf="!isAdmin">
+      Поточний статус заявки:
+      <span
+        [className]="(case.status === 0) ? 'new case-status-r' : (case.status === 1) ? 'done case-status-r' : 'in-process case-status-r'"></span>
+      <span
+        class="case-status-bar__text">{{(case.status === 0) ? 'Нова' : (case.status === 1) ? 'Завершена' : 'В роботі'}}</span>
+    </div>
+
   </div>
   <div class="case-dates">
     <span class="case-date">Створено: <b>{{case.created_at | date:'d.MM.y, H:mm'}}</b></span>
