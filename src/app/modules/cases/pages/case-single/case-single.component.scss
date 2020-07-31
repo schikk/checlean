@@ -112,6 +112,37 @@
 
 }
 
+.case-status-bar {
+  display: flex;
+
+  &__text {
+    font-weight: 500;
+    margin: 0 5px;
+  }
+
+}
+
+.case-status-r {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-left: 5px;
+  cursor: help;
+}
+
+.new.case-status-r {
+  background: #E53935;
+}
+
+.done.case-status-r {
+  background: #25732E;
+}
+
+.in-process.case-status-r {
+  background: orange;
+}
+
 ::ng-deep .mat-radio-button.mat-accent .mat-radio-outer-circle {
   border-color: #424242 !important;
 }
